@@ -31,10 +31,6 @@ parameters:
     type: string
     label: Database username
     description: Name of the database user.
-  volume_data:
-    type: string
-    label: extra volume name
-    description: MySQL Dumps volume
 
 resources:
   wait_condition:
