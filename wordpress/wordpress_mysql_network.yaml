@@ -26,12 +26,12 @@ parameters:
 
 resources:
   network:
-    type: lib/private_network.yaml
+    type: https://raw.githubusercontent.com/engel75/HOT/master/wordpress/lib/private_network.yaml
     properties:
       public_network: { get_param: public_network }
 
   mysql:
-    type: lib/mysql.yaml
+    type: https://raw.githubusercontent.com/engel75/HOT/master/wordpress/lib/mysql.yaml
     properties:
       image: { get_param: image }
       flavor: { get_param: flavor }
@@ -41,7 +41,7 @@ resources:
       database_user: wordpress_user
 
   wordpress:
-    type: lib/wordpress.yaml
+    type: https://raw.githubusercontent.com/engel75/HOT/master/wordpress/lib/wordpress.yaml
     properties:
       image: { get_param: image }
       flavor: { get_param: flavor }
