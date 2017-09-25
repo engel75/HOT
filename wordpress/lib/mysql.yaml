@@ -131,7 +131,7 @@ resources:
     type: OS::Cinder::VolumeAttachment
     properties:
       volume_id: { get_resource: volume_data }
-      instance_id: { get_resource: mysql_instance}
+      instance_uuid: { get_resource: mysql_instance}
 
 outputs:
   name:
