@@ -37,7 +37,6 @@ resources:
       flavor: { get_param: flavor }
       key: { get_param: key }
       private_network: { get_attr: [network, name] }
-      volume_data: datavolume
       database_name: wordpress
       database_user: wordpress_user
 

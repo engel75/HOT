@@ -33,6 +33,7 @@ parameters:
     description: Name of the database user.
   volume_data:
     type: string
+    label: extra volume name
     description: MySQL Dumps volume
 
 resources:
@@ -50,7 +51,6 @@ resources:
     type: OS::Cinder::Volume
     properties:
       description: 'user: Volume for dumps'
-      name: { get_param: volume_data }
       size: 2
       availability_zone: nova
 
