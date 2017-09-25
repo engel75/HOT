@@ -1,4 +1,4 @@
-heat_template_version: 2017-09-25
+heat_template_version: 2013-05-23
 
 description: Template that installs a wordpress server and supporting MySQL database running on separate servers including the dedicated network
 

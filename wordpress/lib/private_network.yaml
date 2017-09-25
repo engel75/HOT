@@ -1,4 +1,4 @@
-heat_template_version: 2017-09-25
+heat_template_version: 2013-05-23
 
 description: Template that creates a private network.
 
