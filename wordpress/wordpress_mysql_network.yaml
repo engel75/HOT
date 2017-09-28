@@ -13,11 +13,6 @@ parameters:
     label: Flavor
     description: Type of instance (flavor) to be used on the compute instance.
     default: m1.small
-  key:
-    type: string
-    label: Key name
-    description: Name of key-pair to be installed on the compute instance.
-    default: fenkey
   public_network:
     type: string
     label: Public network name or ID
