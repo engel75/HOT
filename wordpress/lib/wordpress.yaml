@@ -7,7 +7,7 @@ parameters:
     type: string
     label: Image name or ID
     description: Image to be used for server. Please use an Ubuntu based image.
-    default: Ubuntu 16.04 LTS
+    default: xenial-server-cloudimg-amd64
   flavor:
     type: string
     label: Flavor
