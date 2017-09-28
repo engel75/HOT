@@ -21,7 +21,7 @@ parameters:
   prefix:
     type: string
     label: Name prefix
-    description: The prefix to use for the keypair name.
+    description: The prefix to use for the SSH keypair name.
 
 resources:
   key:
@@ -39,7 +39,7 @@ resources:
     properties:
       image: { get_param: image }
       flavor: { get_param: flavor }
-      key: { get_attr: [keypair, public_key] }
+      key: { get_attr: [key, public_key] }
       private_network: { get_attr: [network, name] }
       database_name: wordpress
       database_user: wordpress_user
@@ -49,7 +49,7 @@ resources:
     properties:
       image: { get_param: image }
       flavor: { get_param: flavor }
-      key: { get_attr: [keypair, public_key] }
+      key: { get_attr: [key, public_key] }
       private_network: { get_attr: [network, name] }
       mysql_server: { get_attr: [mysql, ip] }
       database_name: wordpress
