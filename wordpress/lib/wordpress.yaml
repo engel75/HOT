@@ -13,11 +13,6 @@ parameters:
     label: Flavor
     description: Type of instance (flavor) to be used on the compute instance.
     default: m1.small
-  key:
-    type: string
-    label: Key name
-    description: Name of key-pair to be installed on the compute instance.
-    default: fenkey
   private_network:
     type: string
     label: Private network name or ID
@@ -40,6 +35,10 @@ parameters:
     label: Database password
     hidden: true
     description: Password to access the database.
+  key:
+    type: string
+    label: SSH key
+    description: Public SSH Key to access instance.
 
 resources:
   wait_condition:
