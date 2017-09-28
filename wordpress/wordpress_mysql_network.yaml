@@ -23,8 +23,17 @@ parameters:
     label: Public network name or ID
     description: Public network to attach server to.
     default: public
+  prefix:
+    type: string
+    label: Name prefix
+    description: The prefix to use for the keypair name.
 
 resources:
+  key:
+    type: https://raw.githubusercontent.com/engel75/HOT/master/wordpress/lib/key.yaml
+    properties:
+       prefix: { get_param: prefix }
+
   network:
     type: https://raw.githubusercontent.com/engel75/HOT/master/wordpress/lib/private_network.yaml
     properties:

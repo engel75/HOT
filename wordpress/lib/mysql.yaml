@@ -43,13 +43,6 @@ resources:
   wait_handle:
     type: OS::Heat::WaitConditionHandle
 
-  volume_data:
-    type: OS::Cinder::Volume
-    properties:
-      description: 'user: Volume for dumps'
-      size: 2
-      availability_zone: nova
-
   mysql_root_password:
     type: OS::Heat::RandomString
     properties:
@@ -126,12 +119,6 @@ resources:
 
             # notify heat that we are done here
             wc_notify --data-binary '{"status": "SUCCESS"}'
-
-  volume_data_attachment:
-    type: OS::Cinder::VolumeAttachment
-    properties:
-      volume_id: { get_resource: volume_data }
-      instance_uuid: { get_resource: mysql_instance}
 
 outputs:
   name:
