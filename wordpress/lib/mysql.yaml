@@ -7,7 +7,7 @@ parameters:
     type: string
     label: Image name or ID
     description: Image to be used for server. Please use an Ubuntu based image.
-    default: xenial-server-cloudimg-amd64
+    default: Ubuntu
   flavor:
     type: string
     label: Flavor
@@ -17,7 +17,7 @@ parameters:
     type: string
     label: Private network name or ID
     description: Network to attach server to.
-    default: fen-private
+    default: net-private
   database_name:
     type: string
     label: Database name
