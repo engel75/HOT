@@ -33,7 +33,7 @@ resources:
   router:
     type: OS::Neutron::Router
     properties:
-      #ha: no
+      ha: no
       external_gateway_info:
         network: { get_param: public_network }
 
