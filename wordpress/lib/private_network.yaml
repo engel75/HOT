@@ -17,7 +17,7 @@ parameters:
     type: comma_delimited_list
     label: DNS nameservers
     description: Comma separated list of DNS nameservers for the private network.
-    default: '217.71.87.106,212.71.102.58'
+    #default: '217.71.87.106,212.71.102.58'
 
 resources:
   private_network:
@@ -28,12 +28,12 @@ resources:
     properties:
       network_id: { get_resource: private_network }
       cidr: 10.10.10.0/24
-      dns_nameservers: { get_param: dns }
+      #dns_nameservers: { get_param: dns }
 
   router:
     type: OS::Neutron::Router
     properties:
-      ha: no
+      #ha: no
       external_gateway_info:
         network: { get_param: public_network }
 
