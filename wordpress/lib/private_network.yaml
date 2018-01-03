@@ -35,6 +35,7 @@ resources:
     properties:
       external_gateway_info:
         network: { get_param: public_network }
+        ha: yes
 
   router-interface:
     type: OS::Neutron::RouterInterface
