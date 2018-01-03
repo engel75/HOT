@@ -97,6 +97,10 @@ resources:
             ping -c3 9.9.9.9
             ip r
             netstat -rn
+            echo yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+            nslookup kollax.ewcs.ch
+            echo 'xxxxxxxxxxxxxx curl -k https://kollax.ewcs.ch:8004/ xxxxxxxxxxxxxxxxx'
+            curl -k https://kollax.ewcs.ch:8004/
             apt-get update
             export DEBIAN_FRONTEND=noninteractive
             apt-get install -y mysql-server
