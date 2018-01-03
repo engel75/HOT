@@ -13,11 +13,11 @@ parameters:
     label: CIDR
     description: The CIDR of the private network.
     default: '10.10.10.0/24'
-  dns:
-    type: comma_delimited_list
-    label: DNS nameservers
-    description: Comma separated list of DNS nameservers for the private network.
-    #default: '217.71.87.106,212.71.102.58'
+#  dns:
+#    type: comma_delimited_list
+#    label: DNS nameservers
+#    description: Comma separated list of DNS nameservers for the private network.
+#    #default: '217.71.87.106,212.71.102.58'
 
 resources:
   private_network:
